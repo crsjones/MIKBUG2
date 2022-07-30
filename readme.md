@@ -17,11 +17,11 @@ or send the text page to me and I will collate it.
 
 Note for transcribers:
 
-Comment lines start with an asterisk - `*`
-Labels start in column 1
-Opcodes start in column 8
-Operands start in column 15
-In-line comments usually start in column 24
+* Comment lines start with an asterisk - `*`
+* Labels start in column 1
+* Opcodes start in column 8
+* Operands start in column 15
+* In-line comments usually start in column 24
 
 e.g.
 
