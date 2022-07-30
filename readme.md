@@ -14,3 +14,20 @@ Will this work? I don't know but if you want to help, type in a page and use git
 or send the text page to me and I will collate it.
 
 ### craigrsjones@gmail.com
+
+Note for transcribers:
+
+* Comment lines start with an asterisk - `*`
+* Labels start in column 1
+* Opcodes start in column 8
+* Operands start in column 15
+* In-line comments usually start in column 24
+
+e.g.
+
+```
+000000000111111111122222222223333333333
+123456789012345678901234567890123456789
+|------|------|--------|---------------
+SWI    EQU    $3F      SWI OP CODE
+```
