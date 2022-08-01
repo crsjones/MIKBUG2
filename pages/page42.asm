@@ -1,5 +1,5 @@
 *
-******* COPYRIGHT (C0 1977 MOTOROLA INC - AUSTIN TEXAS
+******* COPYRIGHT (C) 1977 MOTOROLA INC - AUSTIN TEXAS
 *
 *
 *********************
