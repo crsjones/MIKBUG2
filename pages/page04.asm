@@ -2,7 +2,7 @@
        BSR    BADDR    GET BEG ADDR
        STX    BEGA
        BSR    PCRLF    PRINT CR LF
-       LDX    MCL5
+       LDX    #MCL5
        BSR    PDATA1   ASK FOR END ADDR
        BSR    BADDR    GET END ADDRESS
        STX    ENDA
@@ -14,6 +14,7 @@ PCRLF  STX    XHI      SAVE XR
        BSR    PDATA1   PRINT CRLF
        LDX    XHI
        RTS
+
 *
 INHEX  BSR    INCH
 INHEX2 SUBA   #$30
@@ -32,12 +33,13 @@ OUT2HA BSR    OUTHL    OUT LEFT HEX CHAR
        LDAA   0,X      PICK UP BYTE AGAIN
        INX
        BRA    OUTHR    OUTPUT RIGHT HEX CHAR AND RTS
+
 OUT4HS BSR    OUT2H    OUTPUT 4 HEX CHAR + SPACE
 OUT2HS BSR    OUT2H    OUTPUT 2 HEX CHAR + SPACE
 OUTS   LDAA   #$20     SPACE
        BRA    OUTCH    ( BSR & RTS )
 LOAD   EQU    *
-       LDAAA  #$21
+       LDAA   #$21
        BSR    OUTCH    OUTPUT CHAR
 *
 * TURN READER RELAY ON
