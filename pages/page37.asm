@@ -1,0 +1,35 @@
+*
+* BYTEOUT SENDS BYTE IN ACCA TO TAPE
+*
+*     RAM:  R, S (CHANGED IN CRC)
+*     REGS:  ACCA, ACCB (DESTROYED)
+*     EXIT:  ACCA = 0, ACCB UNDEFINED
+*
+*     ACCA = DATA BYTE (SHIFTED)
+*     ACCB = RECORDING PATTERN (ONE BIT)
+*
+BYTEOU PSHA            SAVE THE DATA BYTE
+       BSR    CRC2     ) DO THE CRC FIRST
+       PULA            RECOVER THE DATA BYTE
+       SEC             SET STOP
+       ROLA            DATA BIT INTO CARRY
+       BRA    BY2
+BY1    PULA            RECOVER FROM DONE TEST
+       PSHA            SAVE SHIFTING BYTE
+       BSR    CRC2
+       PULA            RECOVER SHIFTING BYTE
+       ASLA            DATA BIT INTO CARRY
+BY2    LDAB   #$0A     RECORDING PATTERN
+       JSR    TAOU1    SEND ACCB TO TAPE
+       PSHB            SAVE PATTERN
+       LDA    PATDEL   ELEMENT DELAY
+BY4    DECB
+       BNE    BY4      BRANCH IF ELEMENT NOT DONE
+       PULB            RECOVER PATTERN
+       ROLB            NEXT ELEMENT (DATA FROM CARRY)
+       BCC    BY3      BRANCH IF PATTERN NOT DONE
+       PSHA            SAVE DATA BYTE BEFORE TEST
+       ASLA            TEST ACCA
+       BNE    BY1      BRANCH IF BYTE NOT DONE
+BY5    INS             RESTORE STACK
+       RTS
