@@ -38,7 +38,7 @@ CHA1   BSR    INCH1    INPUT CHAR
        CMPA   #$0A
        BEQ    LF       CHECK FOR LINE FEED
        CMPA   #$5E
-       BEQ    VA       CHECK FOR ^
+       BEQ    UA       CHECK FOR ^
        JSR    INHEX2   S BSR BYTE
        JSR    BYTE2    GET NEW BYTE
        STAA   X        CHANGE MEMORY
