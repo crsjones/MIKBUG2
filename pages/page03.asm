@@ -30,8 +30,8 @@ BYTE2  ASLA
        BSR    INHEX
        ABA
        TAB
-       ADDB   CKSUM
-       STAB   CKSUM
+       ADDB   CKSM
+       STAB   CKSM
        RTS
 
 OUTHL  LSRA            OUT HEX LEFT BCD DIGIT
