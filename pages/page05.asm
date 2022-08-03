@@ -1,7 +1,7 @@
        CMPA   #'9
        BEQ    C1
        CMPA   #'1
-       BNE    LOAD3    2ND CHAR NOT ( 1 )
+       BNE    LOAD3    2ND CHAR NOT (1)
        CLR    CKSM     ZERO CHECKSUM
        JSR    BYTE     READ BYTE
        SUBA   #2

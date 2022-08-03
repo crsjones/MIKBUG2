@@ -8,8 +8,8 @@ CKOBRA LDX    TRCADR   X : = TRACE ADDRESS
        CMPB   #$7E     JUMP, EXTENDED?
        BEQ    JMPEXT
        CMPB   #$AD     JSR,  INDEXED?
-       BEQ    JMPIDX   ( JUMP IDXED IS SAME AS
-*                       TRANSFER OF CONTROL )
+       BEQ    JMPIDX   (JUMP IDXED IS SAME AS
+*                       TRANSFER OF CONTROL)
        CMPB   #$BD     JSR, EXTENDED?
        BEQ    JMPEXT
        CMPB   #$3B     RTI?
@@ -17,7 +17,7 @@ CKOBRA LDX    TRCADR   X : = TRACE ADDRESS
        CMPB   #$39     RTS?
        BEQ    RTSSIM
        CMPB   #$8D     BSR?
-       BEQ    BRGO     ( BRANCH PROCESSING )
+       BEQ    BRGO     (BRANCH PROCESSING)
 *
 * NOT A BRANCH, JUMP. RTI, RTS
 * A REGISTER HOLDS # BYTES IN INSTRUCTION
