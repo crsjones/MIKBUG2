@@ -7,7 +7,7 @@
        BSR    PUNT2
 *     PUNCH DATA
        LDX    TW
-PUN32  BSR    PUNT2    PUNCH ONE BYTE ( 2 FRAMES )
+PUN32  BSR    PUNT2    PUNCH ONE BYTE (2 FRAMES)
        DEC    TEMP     DEC BYTE COUNT
        BNE    PUN32
        STX    TW

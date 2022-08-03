@@ -1,7 +1,7 @@
        CMPA   #'9
        BEQ    C1
        CMPA   #'1
-       BNE    LOAD3    2ND CHAR NOT ( 1 )
+       BNE    LOAD3    2ND CHAR NOT (1)
        CLR    CKSM     ZERO CHECKSUM
        JSR    BYTE     READ BYTE
        SUBA   #2
@@ -26,8 +26,7 @@ LOAD19 LDAA   #'?      PRINT QUESTION MARK
        BSR    OUTCH1
 C1     JMP    CONTRL
 *
-
-* CHANGE MEMORY ( M AAAA DD NN )
+* CHANGE MEMORY (M AAAA DD NN)
 *
 CHANGE JSR    BADDR    BUILD ADDRESS
        BSR    OUTS     OUTPUT SPACE
