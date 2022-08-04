@@ -8,7 +8,7 @@ GOTO   BSR    BADDRJ   GO GET ADDRESS FROM USER
        TSX
        LDAA   XHI      SAVE PCH ON STACK
        STAA   5,X
-       LDAA   XLO      PUSH PCL
+       LDAA   XLOW     PUSH PCL
        STAA   6,X
        RTI             GO TO USER PRG
 *

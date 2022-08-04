@@ -3,7 +3,7 @@
 *
 ADRSTR EQU    *
        FDB    STACK    INIT FOR "SP"
-       FDB    SWI1S    INIT FOR "SWI1"
+       FDB    SWI15    INIT FOR "SWI1"
        FDB    BRKINH   INIT FOR "SWI2"
 *
        BRA    BRG      'BRA' INST IS REPLACED BY
@@ -52,7 +52,7 @@ INCH   JMP    INCH1
 * PRINT DATA POINTED AT BY X-REG
 PDATA2 BSR    OUTCH
        INX
-PDATA1 LDAA   X
+PDATA1 LDAA   0,X
        CMPA   #4
        BNE    PDATA2
        RTS             STOP ON EOT

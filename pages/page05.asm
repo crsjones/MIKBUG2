@@ -12,7 +12,7 @@
 LOAD11 JSR    BYTE
        DEC    BYTECT
        BEQ    LOAD15   ZERO BYTE COUNT
-       STAA   X        STORE DATA
+       STAA   0,X      STORE DATA
        CMPA   0,X      CHECK DATA
        BNE    LOAD19   DATA NOT STORED
        INX
@@ -40,8 +40,8 @@ CHA1   BSR    INCH1    INPUT CHAR
        BEQ    UA       CHECK FOR ^
        JSR    INHEX2   S BSR BYTE
        JSR    BYTE2    GET NEW BYTE
-       STAA   X        CHANGE MEMORY
-       CMPA   X
+       STAA   0,X      CHANGE MEMORY
+       CMPA   0,X
        BNE    LOAD19   NO CHANGE
        BRA    CHA1
 LF     INX             INC ADDR

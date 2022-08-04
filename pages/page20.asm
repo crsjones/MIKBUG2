@@ -22,9 +22,9 @@ OPCBYT EQU    *
        LSRA            LOWER 4 BITS OF A
 *
        LDX    #OPBTTB  X:= ADDRESS OF TABLE
-       BSR    INX      INCREMENT X TO POINT TO CORRECT
+       BSR    INCX     INCREMENT X TO POINT TO CORRECT
 *
-       LDA    0,X      GET TABLE ENTRY
+       LDAA    0,X     GET TABLE ENTRY
        BNE    OPBTRT   IF NOT 0 THEN NO FURTHER
 *                            PROCESSING NEEDED
 *
