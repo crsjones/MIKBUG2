@@ -49,7 +49,7 @@ LF     INX             INC ADDR
 UA     LDAA   #$0A
        BSR    OUTCH1   OUTPUT LF
        DEX             DEC ADDR
-UA1    STX    XHI      SAVE DATA ADDR
+UA1    STX    XHI      SAV DATA ADDR
        LDX    #MCL+1
        JSR    PDATA1   PRINT CR
        LDX    #XHI
