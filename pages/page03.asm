@@ -47,7 +47,7 @@ INCH   JMP    INCH1
 * PRINT DATA POINTED AT BY X-REG
 PDATA2 BSR    OUTCH
        INX
-PDATA1 LDAA   X
+PDATA1 LDAA   0,X
        CMPA   #4
        BNE    PDATA2
        RTS             STOP ON EOT
