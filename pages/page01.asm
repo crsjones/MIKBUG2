@@ -37,14 +37,14 @@ BASORG EQU    *        BASE ORIGIN
 *     I/O INTERRUPT SEQUENCE
 *
 IO     LDX    IOV
-       JMP    0,X
+       JMP    X
 *
 *     NMI SEQUENCE
 *
 POWDWN LDX    NIO      GET NMI VECTOR
-       JMP    0,X
+       JMP    X
 *
 *     SWI INTERRUPT SEQUENCE
 *
 SFEI   LDX    SWI1
-       JMP    0,X
+       JMP    X

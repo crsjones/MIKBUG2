@@ -16,7 +16,7 @@ TI4    BSR    PDATA
        CMPA   #'D      DUMP MODE?
        BNE    TIN7
        LDX    #MSG4    SEND START/STOP PROMPT
-       BSR    PDATA1P
+       BSR    PDAT1P
        JSR    BADDR
        STX    STARTP
        JSR    PCRLF

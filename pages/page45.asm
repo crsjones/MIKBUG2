@@ -17,7 +17,7 @@ DL4    INS             CLEAN UP THE STACK
 *
 DIVOVF INS             CLEAN UP STACK
        INS
-DIVOV2 INT
+DIVOV2 INS
        SEV             SET THE OVERFLOW FLAG
        RTS
 *

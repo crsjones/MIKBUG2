@@ -7,7 +7,7 @@
 *
 SENCRC LDAA   S
        STAA   L        TEMPORARY CRC(L) STORAGE
-       LDDA   R
+       LDAA   R
        BSR    BYTOV1   SEND CRC(H)
        LDAA   L
        BRA    BYTOV1   SEND CRC(L)
