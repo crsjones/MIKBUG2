@@ -12,7 +12,7 @@
 LOAD11 JSR    BYTE
        DEC    BYTECT
        BEQ    LOAD15   ZERO BYTE COUNT
-       STAA   X        STORE DATA
+       STAA   0,X      STORE DATA
        CMPA   0,X      CHECK DATA
        BNE    LOAD19   DATA NOT STORED
        INX

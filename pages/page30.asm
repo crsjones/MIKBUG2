@@ -1,0 +1,64 @@
+*
+* PRINT LINE WITH A PRECEEDING CR/LF
+*   X POINT TO STRING, STRING MUST
+*   TERMINATE WITH A $4 CHARACTER.
+*
+PDATA  JSR    PCRLF
+PDAT1P JMP    PDATA1
+*
+* TINS PROVIDES TAPE "IN'S" FOR MIKBUG KEYBOARD
+*     CONTROL OF TAPE SYSTEM
+*
+*
+* ENTER HERE
+*
+*
+EXORT  BSR    EXOR     CALL TAPE ROUTINE VIA A BSR
+       JMP    ENT1     RETURN TO EXEC
+*
+*
+*
+*
+*
+* TIN'S ERROR ROUTINE
+*
+ERR    LDAA   #'7      PRINT '?'
+       JSR    OUTCH
+* FALL INTO TINS
+*
+*
+*
+EXOR   EQU    *
+TINS   LDX    #$1B26   STANDARD SPEED
+       STX    TOTCNT
+SOFT   EQU    *
+TINSS  LDX    #MSG1    SEND PGM TITLE
+TI1    BSR    PDATA
+TI2A   LDX    #MSG5    SEND SPEED QUESTION
+       BSR    PDATA
+       JSR    BYTE     INPUT 2 HEX CHARACTERS
+       CMPA   #$20     2000 BAUD?
+       BNE    TIN1
+       LDX    #$020D
+       BRA    TIN5
+TIN1   CMPA   #$16     1600 BAUD?
+       BNE    TIN2
+       LDX    #$0D11
+       BRA    TIN5
+TIN2   CMPA   #$12     1200 BAUD?
+       BNE    TIN3
+       LDX    #$1218
+       BRA    TIN5
+TIN3   CMPA   #$04     0400 BAUD?
+       BNE    TIN4
+       LDX    #$3550
+       BRA    TIN5
+TIN4   CMPA   #$08
+       BNE    ERR      NOT A VALID SPEED
+       LDX    #$1B26   800 BAUD IS NORMAL
+
+
+
+
+
+

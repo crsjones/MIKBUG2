@@ -24,7 +24,7 @@ DIVOV2 INT
 * INTERRUPT VECTORS
 *
        ORG    BASORG+$7F8
-       FBD    IO
+       FDB    IO
        FDB    SFEI
        FDB    POWDWN
        FDB    START

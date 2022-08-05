@@ -1,5 +1,5 @@
 OUTCH1 PSHB            SAVE BREG
-OUTC1  LDAB   ACIACS
+OUTC1  LDAB   ACIAS
        ASRB
        ASRB
        BCC    OUTC1    XMIT NOT READY

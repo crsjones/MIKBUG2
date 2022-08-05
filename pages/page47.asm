@@ -22,7 +22,7 @@ CLLL   RMB    1        RTS
 H      RMB    1        LOAD IX, ETC.
 L      RMB    1
 Q      RMB    1        Q HOLDS LAST BYTE RECOVERED
-R      RMS    1        R,S IS CRC REGISTER
+R      RMB    1        R,S IS CRC REGISTER
 S      RMB    1
 V      RMB    1        PAGE COUNT
 T1     EQU    CL
