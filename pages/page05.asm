@@ -40,16 +40,16 @@ CHA1   BSR    INCH1    INPUT CHAR
        BEQ    UA       CHECK FOR ^
        JSR    INHEX2   S BSR BYTE
        JSR    BYTE2    GET NEW BYTE
-       STAA   0,X      CHANGE MEMORY
-       CMPA   0,X
-       BNE    LOAD19   NO CHANGE
+       STAA   X        CHANGE MEMORY
+       CMPA   X
+       BNE    LOAD19   NO CHNAGE
        BRA    CHA1
 LF     INX             INC ADDR
        BRA    UA1
 UA     LDAA   #$0A
        BSR    OUTCH1   OUTPUT LF
        DEX             DEC ADDR
-UA1    STX    XHI      SAVE DATA ADDR
+UA1    STX    XHI      SAV DATA ADDR
        LDX    #MCL+1
        JSR    PDATA1   PRINT CR
        LDX    #XHI
