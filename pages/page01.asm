@@ -26,7 +26,7 @@
 *     V  SET A BREAKPOINT WITH ADDRESS 'N'
 *     E  EXORTAPE CASSETTE INTERFACE
 *
-       OPT    S,O,LLEN=80,CREF
+*      OPT    S,O,LLEN=80,CREF
 ACIAS  EQU    $8008
 ACIAD  EQU    $8009
 SWI    EQU    $3F      SWI OP CODE
@@ -37,14 +37,14 @@ BASORG EQU    *        BASE ORIGIN
 *     I/O INTERRUPT SEQUENCE
 *
 IO     LDX    IOV
-       JMP    X
+       JMP    0,X
 *
 *     NMI SEQUENCE
 *
 POWDWN LDX    NIO      GET NMI VECTOR
-       JMP    X
+       JMP    0,X
 *
 *     SWI INTERRUPT SEQUENCE
 *
 SFEI   LDX    SWI1
-       JMP    X
+       JMP    0,X
