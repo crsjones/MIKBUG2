@@ -6,7 +6,7 @@ ADRSTR EQU    *
        FDB    SWI1S    INIT FOR "SWI1"
        FDB    BRKINH   INIT FOR "SWI2"
 *
-       BRA    BRG      'BRA' INST IS REPLACED BY
+       BRA    BRG      "BRA" INST IS REPLACED BY
        JMP    BRNOGO   COND BRA INST IN ROUT.
 BRG    JMP    BRGO     WHICH DETERMINES IF
 *                      BRA IS GO/NOGO
@@ -19,7 +19,6 @@ BADDR  BSR    BYTE     READ 2 FRAMES
        STAA   XLOW
        LDX    XHI      (X) ADDRESS WE BUILT
        RTS
-
 * INPUT BYTE (TWO FRAMES)
 BYTE   BSR    INHEX    GET HEX CHAR
 BYTE2  ASLA
@@ -33,19 +32,15 @@ BYTE2  ASLA
        ADDB   CKSM
        STAB   CKSM
        RTS
-
 OUTHL  LSRA            OUT HEX LEFT BCD DIGIT
        LSRA
        LSRA
        LSRA
-
-
 OUTHR  ANDA   #$F      OUT HEX RIGHT BCD DIGIT
        ADDA   #$30
        CMPA   #$39
        BLS    OUTCH
        ADDA   #$7
-
 * OUTPUT ONE CHAR
 OUTCH  JMP    OUTCH1
 INCH   JMP    INCH1
