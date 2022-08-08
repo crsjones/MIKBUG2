@@ -38,7 +38,7 @@ OUT2HS BSR    OUT2H    OUTPUT 2 HEX CHAR + SPACE
 OUTS   LDAA   #$20     SPACE
        BRA    OUTCH    (BSR & RTS)
 LOAD   EQU    *
-       LDAA   #$21
+       LDAA   #@21
        BSR    OUTCH    OUTPUT CHAR
 *
 * TURN READER RELAY ON
