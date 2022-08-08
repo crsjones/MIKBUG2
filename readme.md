@@ -1,17 +1,24 @@
 # MIKBUG version 2.0
 
-A PDF file containing the listing of MIKBUG 2.0 can be found in a few places on the internet.
-There does not appear to be a source file available.
+A PDF file containing the listing of MIKBUG 2.0 can be found in a few
+places on the internet.  There does not appear to be a source file
+available.
 
-In a moment of stupidity or bravery I suggested to the MOTOROLA 6809 / 6309, 6800 ASSEMBLY LANGUAGE PROGRAMMING group 
-on Facebook that we could share the work in converting this PDF into a source file so we could run it again.
+In a moment of stupidity or bravery I suggested to the MOTOROLA 6809 /
+6309, 6800 ASSEMBLY LANGUAGE PROGRAMMING group on Facebook that we could
+share the work in converting this PDF into a source file so we could run
+it again.
 
-### mikbug20.pdf is the original file.
-### Mikbug20srconly.pdf is the original file with only the listing of the code.
-### MIKBUG2.asm is the source file we are trying to create.
+The source compiles (albeit with one syntactical change) using
+[as0](https://github.com/JimInCA/motorola-6800-assembler).  The
+change is replacing uses of `X` when used as an indirection
+pointer with `0,X`.
 
-Will this work? I don't know but if you want to help, type in a page and use git to submit it here
-or send the text page to me and I will collate it.
+* `mikbug20.pdf` is the original file.
+* `mikbug20srconly.pdf` is the original file with only the listing of the code.
+* `pages/*` are the transcriptions of the individual pages
+* `mikbug2.asm` is the combined output of the transcription effort
+* `mikbug2.lst` is the output listing from the assembler
 
 ### craigrsjones@gmail.com
 
