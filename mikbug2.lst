@@ -185,7 +185,7 @@
 0185 f8cc 86 20              OUTS   LDAA   #$20     SPACE
 0186 f8ce 20 a5                     BRA    OUTCH    (BSR & RTS)
 0187 f8d0                    LOAD   EQU    *
-0188 f8d0 86 21                     LDAA   #$21
+0188 f8d0 86 11                     LDAA   #@21
 0189 f8d2 8d a1                     BSR    OUTCH    OUTPUT CHAR
 0190                         *
 0191                         * TURN READER RELAY ON
