@@ -915,7 +915,7 @@
 0914 fc55 27 08                     BEQ    OPBT3    YES, UPDATE A
 0915 fc57 c1 ce                     CMPB   #$CE     3 BYTE INSTR?
 0916 fc59 27 04                     BEQ    OPBT3    YES, UPDATE A
-0917 fc5b c1 08                     CMPB   #8E      3 BYTE INSTRUCTION?
+0917 fc5b c1 8e                     CMPB   #$8E     3 BYTE INSTRUCTION?
 0918 fc5d 26 01                     BNE    OPBTRT   NO, RETURN
 0919                         *
 0920 fc5f 4c                 OPBT3  INCA            # BYTES IN INSTRUCTION:=3

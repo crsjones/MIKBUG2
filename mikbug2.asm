@@ -914,7 +914,7 @@ OPCBYT EQU    *
        BEQ    OPBT3    YES, UPDATE A
        CMPB   #$CE     3 BYTE INSTR?
        BEQ    OPBT3    YES, UPDATE A
-       CMPB   #8E      3 BYTE INSTRUCTION?
+       CMPB   #$8E     3 BYTE INSTRUCTION?
        BNE    OPBTRT   NO, RETURN
 *
 OPBT3  INCA            # BYTES IN INSTRUCTION:=3
