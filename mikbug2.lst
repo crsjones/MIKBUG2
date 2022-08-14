@@ -1101,7 +1101,7 @@
 1085                         *
 1086                         * TIN'S ERROR ROUTINE
 1087                         *
-1088 fd0a 86 37              ERR    LDAA   #'7      PRINT '?'
+1088 fd0a 86 3f              ERR    LDAA   #'?      PRINT '?'
 1089 fd0c bd f8 75                  JSR    OUTCH
 1090                         * FALL INTO TINS
 1091                         *
@@ -1118,7 +1118,7 @@
 1102 fd1f bd f8 55                  JSR    BYTE     INPUT 2 HEX CHARACTERS
 1103 fd22 81 20                     CMPA   #$20     2000 BAUD?
 1104 fd24 26 05                     BNE    TIN1
-1105 fd26 ce 02 0d                  LDX    #$020D
+1105 fd26 ce 0b 0d                  LDX    #$0B0D
 1106 fd29 20 22                     BRA    TIN5
 1107 fd2b 81 16              TIN1   CMPA   #$16     1600 BAUD?
 1108 fd2d 26 05                     BNE    TIN2

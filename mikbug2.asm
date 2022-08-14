@@ -1085,7 +1085,7 @@ EXORT  BSR    EXOR     CALL TAPE ROUTINE VIA A BSR
 *
 * TIN'S ERROR ROUTINE
 *
-ERR    LDAA   #'7      PRINT '?'
+ERR    LDAA   #'?      PRINT '?'
        JSR    OUTCH
 * FALL INTO TINS
 *
@@ -1102,7 +1102,7 @@ TI2A   LDX    #MSG5    SEND SPEED QUESTION
        JSR    BYTE     INPUT 2 HEX CHARACTERS
        CMPA   #$20     2000 BAUD?
        BNE    TIN1
-       LDX    #$020D
+       LDX    #$0B0D
        BRA    TIN5
 TIN1   CMPA   #$16     1600 BAUD?
        BNE    TIN2
