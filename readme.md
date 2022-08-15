@@ -20,7 +20,6 @@ pointer with `0,X`.
 * `mikbug2.asm` is the combined output of the transcription effort
 * `mikbug2.lst` is the output listing from the assembler
 
-### craigrsjones@gmail.com
 
 Note for transcribers:
 
